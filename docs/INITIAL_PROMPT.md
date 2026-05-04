@@ -46,7 +46,7 @@
 
 ## 技術スタック（変更不可）
 
-- Next.js 15 (App Router) + React 19 + TypeScript (strict)
+- Next.js 16 (App Router) + React 19 + TypeScript (strict)
 - Shopify Storefront API (Hydrogenではなく Next.js + Vercel を採用、横展開を最優先するため)
 - Supabase（顧客管理・お問い合わせ・ダッシュボード用、商品/在庫/決済はShopify）
 - Vercel（hnd1リージョン）

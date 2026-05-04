@@ -27,11 +27,11 @@
 ## 🛠️ 技術スタック（Tech Stack）
 
 ### コア
-- **フロントエンド:** Next.js 15 (App Router) + React 19 + TypeScript
+- **フロントエンド:** Next.js 16 (App Router) + React 19 + TypeScript
 - **コマース:** Shopify Storefront API (GraphQL) + Next.js Commerce template ベース
 - **スタイリング:** Tailwind CSS v4 + CSS Modules（カスタムシェーダーUI用）
 - **3D / モーション:** Three.js (WebGPU + WebGL fallback) + React Three Fiber + drei + react-three-postprocessing + GSAP + Framer Motion
-- **デプロイ:** Vercel (Edge Runtime, ISR/PPR)
+- **デプロイ:** Vercel (Edge Runtime, ISR, Cache Components)
 - **データベース:** Supabase (Postgres + Auth + Storage) — 顧客管理・分析・お問い合わせ
 - **バージョン管理:** GitHub
 - **AIメディア:** ElevenLabs Pro / Veo 3 (Google Flow) / C-Dance / Claude API
