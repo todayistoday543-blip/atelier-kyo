@@ -1,0 +1,30 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "model": "claude-opus-4-7",
+  "permissions": {
+    "allow": [
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(git:*)",
+      "Bash(node:*)",
+      "Bash(pnpm:*)",
+      "Bash(vercel:*)",
+      "Bash(supabase:*)",
+      "Bash(shopify:*)",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "WebFetch",
+      "WebSearch",
+      "TodoWrite"
+    ],
+    "ask": [
+      "Bash(rm:*)",
+      "Bash(sudo:*)"
+    ]
+  }
+}
