@@ -36,12 +36,14 @@ model: opus
 新規プロジェクト時の標準フロー：
 
 ```bash
-# 1. Vercel公式 Shopify テンプレートをベースに作成
-npx create-next-app@latest atelier-kyo --typescript --tailwind --app --eslint
-cd atelier-kyo
+# 1. Next.js skeleton（apps/storefront/ 直下に配置）
+pnpm create next-app@latest apps/storefront \
+  --ts --tailwind --app --eslint \
+  --use-pnpm --no-src-dir --import-alias "@/*" --turbopack --yes
+cd apps/storefront
 
 # 2. 必須依存
-npm install @shopify/storefront-api-client \
+pnpm add @shopify/storefront-api-client \
   @supabase/supabase-js \
   @supabase/ssr \
   three @react-three/fiber @react-three/drei @react-three/postprocessing \
@@ -50,7 +52,7 @@ npm install @shopify/storefront-api-client \
   next-intl
 
 # 3. 開発用
-npm install -D @types/three eslint-plugin-react-hooks-extra prettier prettier-plugin-tailwindcss
+pnpm add -D @types/three prettier prettier-plugin-tailwindcss
 ```
 
 ### 2. ディレクトリ構造の維持
