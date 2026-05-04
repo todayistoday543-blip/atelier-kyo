@@ -1,0 +1,96 @@
+{
+  "Meta": {
+    "title": "ARCHIVE — Yokohama Vintage Atelier",
+    "description": "横浜・伊勢佐木町から、1970年代から1990年代までの世界中のヴィンテージ・古着・希少アーカイブを店主の眼で選り抜いてお届けする、個人運営のセレクトショップ。"
+  },
+  "Brand": {
+    "name": "ARCHIVE",
+    "tagline": "ATELIER KYO DEMO",
+    "demoNotice": "デモサイト — ATELIER KYO のサンプル"
+  },
+  "Nav": {
+    "new": "NEW",
+    "vintage": "VINTAGE",
+    "collections": "COLLECTIONS",
+    "story": "STORY",
+    "visit": "VISIT",
+    "search": "Search",
+    "cart": "Cart",
+    "menu": "Menu"
+  },
+  "Hero": {
+    "lineOne": "ARCHIVE OF",
+    "lineTwo": "WORN",
+    "lineThree": "MEMORIES.",
+    "subline": "個人で営む横浜・伊勢佐木町のヴィンテージ・アーカイブ。世界中から選び抜いた一点物を、店主の手で。",
+    "ctaPrimary": "新着を見る",
+    "ctaSecondary": "店主について",
+    "scrollHint": "SCROLL"
+  },
+  "Marquee": {
+    "items": [
+      "1970s DENIM",
+      "DEADSTOCK MILITARY",
+      "EUROPE VINTAGE",
+      "100点以下の限定品",
+      "WORLDWIDE SHIPPING",
+      "横浜・伊勢佐木町",
+      "ATELIER KYO DEMO"
+    ]
+  },
+  "Featured": {
+    "kicker": "NEW ARRIVALS",
+    "heading": "今週入荷した、いま選ぶべき9点。",
+    "viewAll": "すべて見る",
+    "outOfStock": "SOLD",
+    "available": "In stock"
+  },
+  "Story": {
+    "kicker": "STORE PHILOSOPHY",
+    "heading": "店主のひとつの机から、世界中の希少品まで。",
+    "p1": "ARCHIVE は、1970年代後半から1990年代までの世界中のヴィンテージ・古着・希少アーカイブを、店主が一点ずつ選び抜く個人運営のセレクトショップです。",
+    "p2": "「服は記憶を纏う器」を信条に、量産型の古着市場とは一線を画す、年代と素材の本物だけを取り扱います。",
+    "p3": "横浜・伊勢佐木町の小さなアトリエにて、平日午後 1 時より営業。海外からのお客様も歓迎しております。",
+    "since": "since 2018"
+  },
+  "Collections": {
+    "kicker": "ARCHIVES",
+    "heading": "コレクションを巡る",
+    "items": [
+      { "title": "WINTER 70s", "subtitle": "1970年代の冬の記憶", "count": "24点" },
+      { "title": "WORKWEAR ROOTS", "subtitle": "ヨーロッパ・北米の労働着", "count": "31点" },
+      { "title": "DEADSTOCK", "subtitle": "未使用の希少アーカイブ", "count": "12点" }
+    ]
+  },
+  "Visit": {
+    "kicker": "VISIT US",
+    "heading": "週末、横浜の小さな机に。",
+    "address": "〒220-0023 神奈川県横浜市西区平沼一丁目（DEMO データ）",
+    "hours": "平日 13:00 — 20:00 / 土日 12:00 — 21:00 / 火曜定休",
+    "phone": "+81 45-XXX-XXXX",
+    "directions": "Google Maps で開く",
+    "directionsHref": "https://maps.google.com/?q=Yokohama+Isezaki",
+    "mapAlt": "店舗マップ（プレースホルダー）"
+  },
+  "Newsletter": {
+    "kicker": "STAY ARCHIVED",
+    "heading": "新着・限定品の入荷をいち早くお知らせします。",
+    "placeholder": "メールアドレス",
+    "submit": "登録",
+    "consent": "登録は無料で、いつでも解除できます。",
+    "thanks": "ご登録ありがとうございます。"
+  },
+  "Footer": {
+    "shop": "Shop",
+    "shopLinks": ["新着", "ヴィンテージ", "ワークウェア", "デッドストック"],
+    "about": "About",
+    "aboutLinks": ["店主について", "セレクト基準", "出張買取", "オンラインストア利用規約"],
+    "follow": "Follow",
+    "credit": "Built on Atelier Kyo · Next.js 16 · Vercel",
+    "copyright": "© 2026 ARCHIVE / DEMO BY ATELIER KYO"
+  },
+  "DemoBanner": {
+    "label": "DEMO",
+    "text": "これは ATELIER KYO のテンプレートデモです。実在する店舗ではありません。"
+  }
+}

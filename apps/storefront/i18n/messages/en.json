@@ -1,0 +1,100 @@
+{
+  "Meta": {
+    "title": "ARCHIVE — Yokohama Vintage Atelier",
+    "description": "An independently-owned vintage atelier in Yokohama, hand-curating archive pieces from across the world, 1970s through 1990s."
+  },
+  "Brand": {
+    "name": "ARCHIVE",
+    "tagline": "ATELIER KYO DEMO",
+    "demoNotice": "Demo site — built on ATELIER KYO"
+  },
+  "Nav": {
+    "new": "NEW",
+    "vintage": "VINTAGE",
+    "collections": "COLLECTIONS",
+    "story": "STORY",
+    "visit": "VISIT",
+    "search": "Search",
+    "cart": "Cart",
+    "menu": "Menu"
+  },
+  "Hero": {
+    "lineOne": "ARCHIVE OF",
+    "lineTwo": "WORN",
+    "lineThree": "MEMORIES.",
+    "subline": "An independently-run vintage atelier in Yokohama. Hand-picked archive pieces, sourced one-by-one from across the world.",
+    "ctaPrimary": "See new arrivals",
+    "ctaSecondary": "About the curator",
+    "scrollHint": "SCROLL"
+  },
+  "Marquee": {
+    "items": [
+      "1970s DENIM",
+      "DEADSTOCK MILITARY",
+      "EUROPE VINTAGE",
+      "FEWER THAN 100 PIECES",
+      "WORLDWIDE SHIPPING",
+      "YOKOHAMA · ISEZAKI",
+      "ATELIER KYO DEMO"
+    ]
+  },
+  "Featured": {
+    "kicker": "NEW ARRIVALS",
+    "heading": "Nine pieces that just landed this week.",
+    "viewAll": "View all",
+    "outOfStock": "SOLD",
+    "available": "In stock"
+  },
+  "Story": {
+    "kicker": "STORE PHILOSOPHY",
+    "heading": "From one curator's desk to garments across the decades.",
+    "p1": "ARCHIVE is a single-owner vintage atelier curating rare clothing from the late 1970s through the 1990s — one piece at a time, sourced from across the world.",
+    "p2": "We hold the belief that clothes are vessels of memory. Each piece is selected for authenticity of era, material, and provenance — not for resale margin.",
+    "p3": "Visit our small atelier in Isezaki, Yokohama. International visitors are warmly welcome.",
+    "since": "since 2018"
+  },
+  "Collections": {
+    "kicker": "ARCHIVES",
+    "heading": "Browse collections",
+    "items": [
+      { "title": "WINTER 70s", "subtitle": "Memories from 1970s winters", "count": "24 pieces" },
+      {
+        "title": "WORKWEAR ROOTS",
+        "subtitle": "European and North American labor wear",
+        "count": "31 pieces"
+      },
+      { "title": "DEADSTOCK", "subtitle": "Unused, rare archive", "count": "12 pieces" }
+    ]
+  },
+  "Visit": {
+    "kicker": "VISIT US",
+    "heading": "Weekends. A small desk in Yokohama.",
+    "address": "1-chome Hiranuma, Nishi-ku, Yokohama 220-0023, Japan (DEMO)",
+    "hours": "Weekdays 13:00 – 20:00 / Weekends 12:00 – 21:00 / Closed Tuesdays",
+    "phone": "+81 45-XXX-XXXX",
+    "directions": "Open in Google Maps",
+    "directionsHref": "https://maps.google.com/?q=Yokohama+Isezaki",
+    "mapAlt": "Store map (placeholder)"
+  },
+  "Newsletter": {
+    "kicker": "STAY ARCHIVED",
+    "heading": "Be the first to know about new arrivals and one-offs.",
+    "placeholder": "Email address",
+    "submit": "Subscribe",
+    "consent": "Free to subscribe, unsubscribe anytime.",
+    "thanks": "Thanks — you're on the list."
+  },
+  "Footer": {
+    "shop": "Shop",
+    "shopLinks": ["New arrivals", "Vintage", "Workwear", "Deadstock"],
+    "about": "About",
+    "aboutLinks": ["About the curator", "Curation criteria", "House-call buying", "Terms of use"],
+    "follow": "Follow",
+    "credit": "Built on Atelier Kyo · Next.js 16 · Vercel",
+    "copyright": "© 2026 ARCHIVE / DEMO BY ATELIER KYO"
+  },
+  "DemoBanner": {
+    "label": "DEMO",
+    "text": "This is a demonstration template by ATELIER KYO. The store shown is not real."
+  }
+}
