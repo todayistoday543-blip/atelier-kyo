@@ -118,3 +118,62 @@ body {
   outline: 2px solid var(--color-acid);
   outline-offset: 2px;
 }
+
+/* ===========================================================
+   Butter Vintage theme — applied via [data-theme="butter"]
+   on the <html> tag from app/[locale]/butter-vintage/layout.
+   The whole color scheme inverts (light bg, dark fg) and the
+   accent shifts from acid green to tomato red.
+   =========================================================== */
+[data-theme="butter"] {
+  color-scheme: light;
+  --color-ink: #2c1f12;
+  --color-charcoal: #3a2f1f;
+  --color-graphite: #4a3e2c;
+  --color-smoke: #5a4d3a;
+  --color-fog: #7a6b54;
+  --color-haze: #8a7a5e;
+  --color-bone: #f5e7c4;
+  --color-paper: #efe5d0;
+  --color-acid: #d54a2e;
+  --color-acid-soft: #b83a22;
+  --color-flare: #5a6b3f;
+
+  --shadow-acid: 0 0 0 1px var(--color-acid), 0 0 24px -4px rgba(213, 74, 46, 0.32);
+}
+
+[data-theme="butter"] body {
+  background: var(--color-bone);
+  color: var(--color-ink);
+}
+
+[data-theme="butter"] ::-webkit-scrollbar-track {
+  background: var(--color-paper);
+}
+[data-theme="butter"] ::-webkit-scrollbar-thumb {
+  background: var(--color-fog);
+}
+[data-theme="butter"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-graphite);
+}
+
+[data-theme="butter"] :focus-visible {
+  outline-color: var(--color-acid);
+}
+
+/* Stronger film-grain noise for the Butter mood */
+[data-theme="butter"] .noise::after {
+  opacity: 0.08;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='1.2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+
+/* Hair-line bracket typography accent */
+.bracket::before {
+  content: "[";
+  margin-right: 0.25em;
+}
+.bracket::after {
+  content: "]";
+  margin-left: 0.25em;
+}

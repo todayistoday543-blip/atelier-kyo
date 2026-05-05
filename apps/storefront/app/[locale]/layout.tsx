@@ -5,10 +5,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { notFound } from "next/navigation";
 import "../globals.css";
 import { routing, type Locale } from "@/i18n/routing";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { SmoothScrollProvider } from "@/components/layout/SmoothScrollProvider";
-import { DemoBanner } from "@/components/layout/DemoBanner";
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -67,14 +64,9 @@ export default async function LocaleLayout({
       lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased`}
     >
-      <body className="bg-ink text-bone selection:bg-acid selection:text-ink min-h-screen">
+      <body className="min-h-screen">
         <NextIntlClientProvider messages={messages}>
-          <DemoBanner />
-          <SmoothScrollProvider>
-            <Header />
-            <main className="flex min-h-screen flex-col">{children}</main>
-            <Footer />
-          </SmoothScrollProvider>
+          <SmoothScrollProvider>{children}</SmoothScrollProvider>
         </NextIntlClientProvider>
       </body>
     </html>
