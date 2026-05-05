@@ -1,7 +1,7 @@
 # 03 — クライアント受入フロー
 
 > 新規クライアント獲得から運用開始までの **6 ステップ標準フロー**。各段階の所要日数と必要素材を明記。
-> **対象読者:** Kyoiskyo（営業・ヒアリング）、kyo-strategist（進行管理）、クラウドデザイン担当者。
+> **対象読者:** Kyoiskyo（営業・ヒアリング）、kyo-strategist（進行管理）、Claude Design担当者。
 > **最終更新:** 2026-05-05
 
 ---
@@ -80,26 +80,31 @@
 
 ---
 
-## STEP 4 — デザインブリーフ → クラウドデザイン委託 *(所要 1 週間)*
+## STEP 4 — デザインブリーフ → Claude Design 反復生成 *(所要 3〜5 日)*
 
 ### 担当
-- **kyo-stylist**（kyo-strategist が起こしたブリーフをレビュー）
-- クラウドデザイン（外部）
+- **kyo-stylist**（Claude Design ワークフローのオペレーター。プロンプト設計と出力レビュー）
+- **Kyoiskyo**（中間アウトプットへのフィードバック、店主との認識合わせ）
 
 ### 成果物
-- `templates/design-brief-template.md` を埋めたデザインブリーフ
-- 写真撮影リスト（必要なら撮影日程の調整も含む）
-- BrandTokens の初版（`clients/[slug]/config.ts` ドラフト）
+- `templates/design-brief-template.md` を埋めたデザインブリーフ（Claude への入力素材）
+- BrandTokens の確定版（`clients/[slug]/config.ts`）
+- ムード別ヒーロー構造記述（実装可能粒度）
+- コピー初稿（ja / en、店主が承認できる粒度）
 
-### クラウドデザインへの委託内容
-- ロゴリファイン or 新規作成（必要時のみ）
-- 写真ディレクション・撮影（必要時、別費用）
-- メインビジュアル / Hero ビジュアルの作成
-- カラーパレットの最終確定（6 ムードを起点に微調整）
+### Claude Design ワークフローで生成するもの
+- カラーパレットの最終確定（6 ムードを起点、Claude が彩度・明度の微調整候補を提案）
+- コピー一式（Hero / Marquee / Story / Newsletter / Footer の ja / en）
+- Instagram キャプションのトーン定義
+- ロゴ案の文章記述（実装は kyo-stylist が SVG / 画像生成ツールで具現化）
 
-### Kyoiskyo の作業
-- クラウドデザインからの納品物確認
-- デザイン進行中のクライアント承認取り
+### Claude Design **ではない** もの（人間の手が必要）
+- 商品撮影（カメラマン手配 or 店主が撮影）
+- ロゴの最終 SVG（テキスト記述からデザイナーまたは AI 画像生成ツールで形にする）
+- 写真レタッチ（人手 or 別途ツール）
+
+### Claude Design とは何か（再確認）
+**外部のデザイン会社への委託ではない。** kyo-stylist が Anthropic Claude API（Sonnet 4.6 標準）を相棒として、構造化プロンプトで反復生成しながらデザイン判断を行う**内部ワークフロー**。詳細は `docs/06-claude-design-workflow.md`。
 
 ---
 
@@ -162,7 +167,7 @@
 
 ## 役割分担早見表
 
-| ステップ | Kyoiskyo | kyo-scout | kyo-stylist | kyo-architect | kyo-mechanic | クラウドデザイン |
+| ステップ | Kyoiskyo | kyo-scout | kyo-stylist | kyo-architect | kyo-mechanic | Claude Design |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|
 | 1. リサーチ | 確認 | ◎ | | | | |
 | 2. ヒアリング | ◎ | ◯ 議事整理 | | | | |

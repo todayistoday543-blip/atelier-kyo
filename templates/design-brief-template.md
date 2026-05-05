@@ -1,9 +1,9 @@
 # デザインブリーフ・テンプレート
 
-> Atelier Kyo が**外部デザイン委託先（クラウドデザイン等）**に手渡す指示書のひな形。
-> Kyoiskyo / kyo-strategist が記入し、kyo-stylist がレビューする。
-> **想定渡し先:** Figma 共有スペース、Notion、または PDF 化して共有。
-> **最終更新:** 2026-05-05
+> Atelier Kyo の **Claude Design ワークフロー**（kyo-stylist が Anthropic Claude API へ投入する構造化プロンプト素材）に使うブリーフのひな形。
+> Kyoiskyo / kyo-strategist が記入し、kyo-stylist がプロンプト整形して Claude に投入。
+> **想定用途:** `lib/claude/design-prompts.ts` の `renderClientBrief()` の入力 JSON を埋めるための事前ヒアリング。Notion で記入 → JSON に転記 → Claude Design 実行。
+> **最終更新:** 2026-05-06 / Claude Design = AI 駆動デザインワークフローへの方針確定後
 
 ---
 
@@ -13,7 +13,7 @@
 **契約日:** {{YYYY-MM-DD}}
 **目標公開日:** {{YYYY-MM-DD}}
 **Atelier Kyo 担当:** Kyoiskyo / kyo-strategist
-**デザイン担当:** {{クラウドデザイン担当者}}
+**デザイン担当:** {{Claude Design担当者}}
 
 ---
 
@@ -118,7 +118,7 @@
 
 ---
 
-## 5. 必須コピー（Atelier Kyo 側で執筆 / クラウドデザインはレイアウトのみ）
+## 5. 必須コピー（Atelier Kyo 側で執筆 / Claude Designはレイアウトのみ）
 
 - [ ] Hero タグライン（30 字以内 / 縦 3 行構成）
 - [ ] サブライン（120 字以内 / インバウンド対応で en も併記）

@@ -1,7 +1,7 @@
 # 01 — 技術アーキテクチャ
 
 > Atelier Kyo が顧客に提供する Shopify EC 基盤の技術構成図と、その設計判断の理由。
-> **対象読者:** クラウドデザイン担当者、外部開発委託先、技術系ステークホルダー、Kyoiskyo自身の備忘。
+> **対象読者:** Claude Design担当者、外部開発委託先、技術系ステークホルダー、Kyoiskyo自身の備忘。
 > **最終更新:** 2026-05-05
 
 ---
@@ -142,17 +142,19 @@ clients/
 
 コアコンポーネントは `apps/storefront/components/` で共有。クライアント固有のロジックは `clients/[slug]/` に隔離することで、共通基盤の改善が全クライアントへ自動波及する設計。
 
-## 9. クラウドデザイン（外部デザイン委託先）との接続点
+## 9. Claude Design（AI 駆動デザインワークフロー）との接続点
 
-Atelier Kyo は **基盤エンジニアリング**を担当。**ビジュアルデザイン**（写真・グラフィック・モーションのコンセプト）は外部のクラウドデザインに委託する想定。
+Atelier Kyo は基盤エンジニアリング担当。**ビジュアルデザインの判断と生成**（コピー、カラー設計、ムード選定、Hero 構造記述、翻訳）は **Anthropic Claude API を駆動軸にした内部ワークフロー = Claude Design** で実施。外部のデザイン会社への委託ではない。
 
-| 提供する側 | 受け取る側 | 形式 |
+| 入力 | 処理 | 出力 |
 |---|---|---|
-| クラウドデザイン → Atelier Kyo | デザインカンプ / Figma / 画像素材 | Figma URL or 画像 ZIP |
-| Atelier Kyo → クラウドデザイン | デザインブリーフ / コンポーネント仕様 / パフォーマンス予算 | `templates/design-brief-template.md` を埋めたもの |
-| Vercel ダッシュボード | （Kyoiskyo） | プロジェクト設定 / 環境変数 |
+| クライアント brief（業態・年代・価格帯・既存写真）+ 6 ムード選定 | Claude API（Sonnet 4.6 標準）への構造化プロンプト | BrandTokens / コピー初稿 / Hero 構造記述 / モチーフ案 |
+| 商品データ + 撮影写真の説明 | Claude による多言語キャプション量産 + ハッシュタグ案 | Instagram / EC 双方の本文 |
+| ja コピー | Claude による翻訳（ja → en / zh-Hant / ko） | 多言語化 |
 
-接続フロー詳細は `docs/03-client-onboarding.md` を参照。
+**Vercel との接続点 = `ANTHROPIC_API_KEY` を Vercel project env に投入すること**。これが「Kyoiskyo がやるだけ」と仰っていた最終接続作業。手順は `docs/06-claude-design-workflow.md` の §1 を参照。
+
+ライブラリ実装: `apps/storefront/lib/claude/`（client / design-prompts / index）。
 
 ## 10. セキュリティ / コンプライアンス
 
